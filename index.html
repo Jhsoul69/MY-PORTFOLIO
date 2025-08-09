@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hariharan J — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+  <style>
+    :root {
+      /* Updated professional color palette */
+      --bg: #0d1117; /* Dark charcoal background */
+      --card: #161b22; /* Slightly lighter card background */
+      --muted: #8b949e; /* Muted gray text */
+      --accent1: #58a6ff; /* A bright, professional blue */
+      --accent2: #a371f7; /* A vibrant purple */
+      --accent3: #ffc107; /* Amber */
+      --accent4: #673ab7; /* Deep Purple */
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-2: rgba(255, 255, 255, 0.03);
+      --accent-grad: linear-gradient(135deg, var(--accent1), var(--accent2));
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      /* Updated background with richer gradients */
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(88, 166, 255, 0.1), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(163, 113, 247, 0.06), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding-bottom:60px;
+    }
+
+    /* layout */
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;position:sticky;top:0;background:linear-gradient(180deg, rgba(13, 17, 23, 0.6), rgba(13, 17, 23, 0.35));backdrop-filter: blur(8px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:40}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;display:inline-grid;place-items:center;background:var(--accent-grad);box-shadow:0 6px 24px rgba(88, 166, 255, 0.14);font-weight:800;color:#0d1117}
+    .brand h1{font-size:18px;margin:0;letter-spacing:0.2px}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px;padding:8px 12px;border-radius:8px; transition: color 0.2s, background 0.2s;}
+    nav a:hover{color:white;background:rgba(255,255,255,0.08)}
+
+    .container{max-width:1100px;margin:32px auto;padding:0 22px}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.aside{order:2}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:22px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+
+    h2{margin:0 0 8px 0;font-size:16px}
+    h3{margin:0 0 8px 0}
+
+    /* intro */
+    .intro h1{font-size:28px;margin:0;line-height:1.02}
+    .intro .role{display:inline-block;margin-top:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:8px 12px;border-radius:999px;color:var(--accent1);font-weight:700}
+    .muted{color:var(--muted);font-size:14px}
+
+    .hero-cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700; transition: transform 0.2s, box-shadow 0.2s;}
+    .btn:hover{transform: translateY(-2px);}
+    .btn-primary{background:var(--accent-grad);color:#0d1117;box-shadow:0 10px 30px rgba(88, 166, 255, 0.14)}
+    .btn-primary:hover{box-shadow:0 12px 40px rgba(88, 166, 255, 0.2);}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+    .btn-ghost:hover{background:rgba(255,255,255,0.08);color:white;border-color:rgba(255,255,255,0.1);}
+
+    /* aside */
+    .aside .photo{width:100%;height:320px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .contact-list{margin-top:12px}
+    .contact-item{display:flex;gap:10px;align-items:center;padding:8px 0;font-weight:600}
+    .socials{display:flex;gap:10px;margin-top:10px}
+    .socials a{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,0.02);color:var(--accent1);text-decoration:none;border:1px solid rgba(255,255,255,0.02); transition: background 0.2s, color 0.2s;}
+    .socials a:hover{background:var(--accent1);color:#0d1117;transform: translateY(-2px);}
+
+    /* skills */
+    .skill-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:700;font-size:13px; transition: transform 0.2s, box-shadow 0.2s;}
+    .skill:hover{transform:translateY(-4px); box-shadow: 0 4px 10px rgba(0,0,0,0.2);}
+
+    /* projects */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media(max-width:720px){.projects{grid-template-columns:1fr}}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03); transition: transform 0.2s, box-shadow 0.2s;}
+    .project:hover{transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.4);}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .tag{display:inline-block;padding:6px 8px;border-radius:6px;background:rgba(255,255,255,0.02);font-weight:700;margin-top:8px}
+
+    /* timeline / experience */
+    .exp-item{display:flex;gap:12px;margin-top:12px}
+    .exp-item .meta{min-width:120px;color:var(--muted);font-size:13px}
+    .exp-item .body{flex:1}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center}
+
+    /* small utilities */
+    .muted-2{color:var(--muted);font-size:13px}
+
+    /* typing effect */
+    .typing{display:inline-block;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:6px 10px;border-radius:8px}
+
+    /* subtle reveal */
+    .reveal{opacity:0;transform:translateY(8px);animation:reveal .6s cubic-bezier(.2,.9,.3,1) forwards}
+    .reveal.delay-1{animation-delay:.06s}
+    .reveal.delay-2{animation-delay:.12s}
+    .reveal.delay-3{animation-delay:.18s}
+    @keyframes reveal{to{opacity:1;transform:none}}
+
+    /* resume badge */
+    .resume-badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:700}
+
+    /* small screens */
+    @media(max-width:520px){header{padding:14px} .brand h1{font-size:15px} .logo{width:42px;height:42px}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">HJ</div>
+      <div>
+        <h1>Hariharan J</h1>
+        <div class="muted-2">B.E. Cybersecurity Engineering — JJ College of Engineering & Technology</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card intro reveal">
+        <h1>Hi, I'm <span style="color:var(--accent1);">Hariharan J</span></h1>
+        <div class="role">Cybersecurity | AI | Forensics | Cloud</div>
+
+        <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.5">
+          I am <strong>Hariharan J</strong>, a B.E. Cybersecurity Engineering scholar (CGPA 8.5) at J.J College of Engineering & Technology, with expertise across multiple domains including <strong>Artificial Intelligence, Digital Forensics, Network Security, and Cloud Architecture</strong>. My work encompasses architecting <strong>AI-driven medical imaging systems, GPT-4 based admission counselors, secure backend infrastructures</strong>, and a Raspberry Pi–based IoT forensic evidence collector. I build production-ready solutions using <strong>.NET 9, PyTorch, AWS, and advanced cybersecurity toolkits</strong>, and have delivered impact during internships at <strong>Infosys, Horizon Tech Alliance, and Yahweh Solutions</strong>. I combine deep technical expertise with leadership experience in hackathons and mentorship programs to design secure, scalable, and high-performance systems.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:jhariharancse@gmail.com"><i class="fa fa-envelope"></i> Email Me</a>
+          <a class="btn btn-ghost" href="https://github.com/Jhsoul69" target="_blank"><i class="fa fa-code-branch"></i> GitHub</a>
+          <a class="btn btn-ghost" href="#contact"><i class="fa fa-phone"></i> Contact</a>
+          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1svUGLe6ZtCywLdXr995070luINdaUXkP/view?usp=drive_link" target="_blank"><i class="fa fa-file"></i> Resume</a>
+        </div>
+
+        <div style="margin-top:18px" class="reveal delay-1">
+          <h3 style="margin-bottom:6px">Core strengths</h3>
+          <div class="skill-badges">
+            <span class="skill">Network Security</span>
+            <span class="skill">Digital Forensics</span>
+            <span class="skill">AI / Deep Learning</span>
+            <span class="skill">Cloud (AWS)</span>
+            <span class="skill">Backend (.NET 9)</span>
+            <span class="skill">Python / PyTorch</span>
+          </div>
+        </div>
+
+        <div style="margin-top:16px" class="reveal delay-2">
+          <h3 style="margin-bottom:8px">Quick links</h3>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="resume-badge" href="https://www.linkedin.com/in/hariharan-j-2a909a290" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            <a class="resume-badge" href="https://github.com/Jhsoul69" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+            <a class="resume-badge" href="https://leetcode.com/u/jhsoul69" target="_blank"><i class="fa fa-code"></i> LeetCode</a>
+            <a class="resume-badge" href="https://www.hackerrank.com/profile/jhariharancse" target="_blank"><i class="fa fa-terminal"></i> HackerRank</a>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="aside">
+        <div class="card reveal">
+          <img class="photo" src="hari photo.jpg" alt="Hariharan J Photo">
+
+          <div style="margin-top:12px">
+            <h3>Contact</h3>
+            <div class="contact-list">
+              <div class="contact-item"><i class="fa fa-phone"></i> +91-9500963476</div>
+              <div class="contact-item"><i class="fa fa-envelope"></i> jhariharancse@gmail.com</div>
+              <div class="contact-item"><i class="fa fa-location-dot"></i> Madurai, Tamil Nadu, India — 625020</div>
+            </div>
+
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/hariharan-j-2a909a290" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/Jhsoul69" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+              <a href="https://leetcode.com/u/jhsoul69" target="_blank" title="LeetCode"><i class="fa fa-code"></i></a>
+              <a href="https://www.hackerrank.com/profile/jhariharancse" target="_blank" title="HackerRank"><i class="fa fa-terminal"></i></a>
+            </div>
+
+            <div style="margin-top:14px">
+              <h3>Education</h3>
+              <div class="muted-2">B.E. Cybersecurity Engineering (2022–2026)</div>
+              <div class="muted-2">J.J College of Engineering & Technology, Trichy</div>
+              <div style="margin-top:8px" class="muted-2"><strong>CGPA:</strong> 8.5</div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+    </section>
+
+    <section id="skills" class="card reveal" style="margin-top:18px">
+      <h2>Technical Skills</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:10px">
+        <div style="flex:1;min-width:240px">
+          <h3>Languages & Databases</h3>
+          <p class="muted">Python, C# (.NET 9), C, C++, Java, SQL (MSSQL, PostgreSQL), Bash</p>
+
+          <h3 style="margin-top:12px">AI / ML</h3>
+          <p class="muted">TensorFlow, PyTorch, Deep Learning, 3D U-Net, Prompt Engineering</p>
+
+          <h3 style="margin-top:12px">Networking & Security</h3>
+          <p class="muted">TCP/IP, Packet Inspection, DNS/HTTP/ARP, Linux Networking, Firewall Configuration</p>
+        </div>
+
+        <div style="flex:1;min-width:240px">
+          <h3>Tools & Forensics</h3>
+          <p class="muted">Wireshark, Burp Suite, Nmap; Autopsy, Maltego, ADB, Cellebrite UFED, FTK Imager</p>
+
+          <h3 style="margin-top:12px">Cloud & DevOps</h3>
+          <p class="muted">AWS (EC2, S3), VirtualBox, Selenium, Vagrant, Postman, FastAPI, CI/CD, Docker</p>
+
+          <h3 style="margin-top:12px">OS</h3>
+          <p class="muted">Ubuntu, Kali Linux, Windows</p>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <h3>Soft Skills</h3>
+        <p class="muted">Leadership, Teamwork, Mentorship, Event Management, Technical Mentoring</p>
+      </div>
+    </section>
+
+    <section id="projects" class="card reveal" style="margin-top:18px">
+      <h2>Selected Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h4>Multiplayer Online Gaming Tournament Platform</h4>
+          <p>Secure backend APIs built with .NET 9, Supabase, and SQL Server. Implemented authentication, tournament lifecycle, and API security as Associate Backend Engineer.</p>
+          <div class="tag" style="background-color: var(--accent1); color: #0d1117; font-weight: bold;">Backend · .NET 9 · SQL</div>
+        </div>
+
+        <div class="project">
+          <h4>AI-Based CT/MRI Scan Analyzer (Spleen Segmentation)</h4>
+          <p>Implemented 3D U-Net in PyTorch for spleen segmentation; automated reporting with volume metrics and anomaly detection.</p>
+          <div class="tag" style="background-color: var(--accent2); color: #0d1117; font-weight: bold;">PyTorch · 3D U-Net · Medical AI</div>
+        </div>
+
+        <div class="project">
+          <h4>AI-Powered Admission Counselor (GPT-4)</h4>
+          <p>GPT-4 based advisor for eligibility scoring and course matching; achieved 85% accuracy and reduced manual counseling time by 70% (under development).</p>
+          <div class="tag" style="background-color: var(--accent3); color: #0d1117; font-weight: bold;">LLMs · Prompt Eng · Productized AI</div>
+        </div>
+
+        <div class="project">
+          <h4>Forenscope — Portable IoT Forensic Evidence Collector</h4>
+          <p>Raspberry Pi–based device for secure evidence acquisition from embedded systems; integrated FTK, SQLite, and SHA-256 hashing (prototype).</p>
+          <div class="tag" style="background-color: var(--accent4); color: #0d1117; font-weight: bold;">IoT Forensics · Embedded · Chains of Custody</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="card reveal" style="margin-top:18px">
+      <h2>Experience & Internships</h2>
+
+      <div class="exp-item">
+        <div class="meta" style="color: var(--accent1);">June 2025 — Present</div>
+        <div class="body">
+          <h3>Associate Software Engineer — Backend, Horizon Tech Alliance</h3>
+          <p class="muted">Built secure backend APIs (.NET 9) with Supabase and SQL Server; implemented authentication and tournament management features.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="meta" style="color: var(--accent2);">June 2025 — Dec 2025</div>
+        <div class="body">
+          <h3>AI App Developer Intern — Yahweh Solutions</h3>
+          <p class="muted">Working on the AI-Based Admission Counselor project — LLM integration, prompt engineering, and user-centered design for real-time counseling assistance.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="meta" style="color: var(--accent3);">July 2025 — Present (Part-time)</div>
+        <div class="body">
+          <h3>AI Development (Part-time) — Chella Corporations</h3>
+          <p class="muted">Implemented 3D U-Net in PyTorch for spleen segmentation; automated reporting and evaluation pipeline.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="meta" style="color: var(--accent4);">Sep 5, 2025</div>
+        <div class="body">
+          <h3>Artificial Intelligence Intern — Infosys (Shortlisted / Training)</h3>
+          <p class="muted">Selected for Infosys Virtual Internship 6.0 — training in applied AI, classification, clustering, and real-time data transformation (onboarding/training phase).</p>
+        </div>
+      </div>
+
+      <div style="margin-top:16px">
+        <h3>Certifications</h3>
+        <ul class="muted-2">
+          <li>Infosys Artificial Intelligence Primer Certification</li>
+          <li>Cisco Networking Basics Certification</li>
+          <li>Cisco Junior Cyber Analyst (in progress)</li>
+          <li>AWS Cloud Practitioner (in progress)</li>
+          <li>EC-Council: Ethical Hacking, Network Defence, Digital Forensic Essentials</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="card reveal" style="margin-top:18px">
+      <h2>Contact & Availability</h2>
+      <p class="muted">I am based in Madurai, Tamil Nadu (India) and am seeking full-time, part-time, and flexible roles in AI, Cybersecurity, Networking, Cloud Computing, and Software Development, as well as collaborative R&D projects. I am available for an immediate start and am open to remote opportunities or relocation.</p>
+
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="mailto:jhariharancse@gmail.com"><i class="fa fa-envelope"></i> jhariharancse@gmail.com</a>
+        <a class="btn btn-ghost" href="tel:+919500963476"><i class="fa fa-phone"></i> +91-9500963476</a>
+        <a class="btn btn-ghost" href="https://github.com/Jhsoul69" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+      </div>
+
+      <div style="margin-top:14px" class="muted-2">Address: Madurai, Tamil Nadu, India — 625020</div>
+    </section>
+
+    <footer>
+      <div style="font-weight:700">© 2025 Hariharan J | All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script>
+    // small UI niceties: typing headline (simple), reveal on scroll
+    (function(){
+      // typing effect for role (optional enhanced)
+      const roleEl = document.querySelector('.role');
+      const phrases = ['Cybersecurity','AI','Forensics','Cloud Architecture'];
+      let i=0, j=0, forward=true;
+      function type(){
+        const cur = phrases[i];
+        roleEl.textContent = cur.slice(0,j+1);
+        if(forward) j++; else j--;
+        if(j===cur.length){ forward=false; setTimeout(type,800); }
+        else if(j===0 && !forward){ forward=true; i=(i+1)%phrases.length; setTimeout(type,200); }
+        else setTimeout(type,80);
+      }
+      type();
+
+      // simple reveal on scroll
+      const reveals = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+      },{threshold:0.08});
+      reveals.forEach(r=>obs.observe(r));
+    })();
+  </script>
+</body>
+</html>
