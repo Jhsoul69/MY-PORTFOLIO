@@ -5,25 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hariharan J | Cloud Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+body {
   margin:0;
-  font-family:'Inter',sans-serif;
-  background:#ffffff;
+  font-family:'Google Sans',sans-serif;
+  background:#fff;
   color:#202124;
 }
 
-/* NAV */
-nav{
+/* NAVBAR */
+nav {
   display:flex;
   justify-content:space-between;
   padding:20px 60px;
   border-bottom:1px solid #eee;
 }
-nav h2{color:#1a73e8;}
-nav a{
+
+nav h2 { color:#1a73e8; }
+
+nav a {
   margin-left:20px;
   text-decoration:none;
   color:#5f6368;
@@ -31,120 +33,84 @@ nav a{
 }
 
 /* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:40px;
+.hero {
   padding:80px 60px;
+  max-width:900px;
 }
 
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-}
-
-.hero h1{
+.hero h1 {
   font-size:42px;
   font-weight:700;
-  background:linear-gradient(90deg,#1a73e8,#9333ea);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
 }
 
-.hero p{
-  color:#5f6368;
+.hero p {
   font-size:18px;
+  color:#5f6368;
   margin-top:15px;
 }
 
-/* BUTTONS */
-.btn{
-  padding:12px 18px;
-  border-radius:8px;
-  border:none;
-  margin-top:10px;
-  margin-right:10px;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,#1a73e8,#9333ea);
+/* BUTTON */
+.btn {
+  margin-top:20px;
+  padding:12px 20px;
+  background:#1a73e8;
   color:white;
-}
-
-.btn-outline{
-  border:1px solid #ddd;
-  background:white;
-}
-
-/* IMAGE */
-.profile{
-  text-align:center;
-}
-.profile img{
-  width:100%;
-  max-width:250px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:500;
 }
 
 /* SECTION */
-.section{
+.section {
   padding:60px;
   border-top:1px solid #eee;
 }
 
-.section h2{
+.section h2 {
   font-size:28px;
+  margin-bottom:20px;
 }
 
 /* GRID */
-.grid{
+.grid {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
+  gap:30px;
 }
 
 @media(max-width:800px){
   .grid{grid-template-columns:1fr}
   nav{padding:20px}
-  .section{padding:40px 20px}
   .hero{padding:40px 20px}
+  .section{padding:40px 20px}
 }
 
 /* CARD */
-.card{
+.card {
   padding:20px;
-  border-radius:12px;
+  border-radius:10px;
   border:1px solid #eee;
   transition:0.3s;
 }
-.card:hover{
+
+.card:hover {
   transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* SKILLS */
-.skills span{
+.skills span {
   display:inline-block;
   padding:8px 12px;
   margin:6px;
   border-radius:20px;
   background:#f1f3f4;
+  font-size:14px;
 }
 
-/* CONTACT BAR */
-.contact-bar{
-  margin-top:20px;
-}
-.contact-bar a{
-  margin-right:15px;
-  text-decoration:none;
-  font-weight:600;
-  color:#1a73e8;
-}
-
-footer{
+/* FOOTER */
+footer {
   text-align:center;
   padding:30px;
   color:#5f6368;
@@ -154,6 +120,7 @@ footer{
 
 <body>
 
+<!-- NAV -->
 <nav>
   <h2>Hariharan J</h2>
   <div>
@@ -166,117 +133,137 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-
-<div>
-  <h1>Cloud Engineer</h1>
+  <h1>Cloud Engineer building scalable systems on AWS & Google Cloud</h1>
 
   <p>
-    Cloud Engineer Intern at <strong>Cloud Ambassadors (Google Cloud Partner)</strong>.
-    AWS Certified Cloud Practitioner & Google Associate Cloud Engineer with expertise in
-    GCP, Kubernetes, DevOps, and scalable cloud infrastructure.
+    Cloud Engineer Intern at <strong>Cloud Ambassadors (Google Cloud Partner)</strong> with hands-on experience in GCP,
+    Kubernetes (GKE), IAM, and cloud infrastructure.
+
+    <br><br>
+
+    <strong>AWS Certified Cloud Practitioner</strong> & 
+    <strong>Google Associate Cloud Engineer (ACE)</strong> with strong expertise in
+    cloud architecture, networking, and DevOps.
   </p>
 
-  <div>
-    <button class="btn btn-primary" onclick="window.location.href='mailto:jhariharancse@gmail.com'">Email Me</button>
-    <button class="btn btn-outline" onclick="window.open('https://www.linkedin.com/in/hariharan-j-2a909a290')">LinkedIn</button>
-    <button class="btn btn-outline" onclick="window.open('https://github.com/Jhsoul69')">GitHub</button>
-  </div>
-
-  <div class="contact-bar">
-    📧 jhariharancse@gmail.com <br>
-    🔗 linkedin.com/in/hariharan-j-2a909a290
-  </div>
-</div>
-
-<div class="profile">
-  <img src="hari photo.jpg" alt="Hariharan">
-</div>
-
+  <button class="btn" onclick="window.location.href='mailto:jhariharancse@gmail.com'">
+    Contact Me
+  </button>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section">
-<h2>Experience</h2>
+  <h2>Experience</h2>
 
-<div class="grid">
-<div class="card">
-<h3>Cloud Engineer Intern</h3>
-<p><strong>Cloud Ambassadors (Google Partner)</strong></p>
-<p>GCP, IAM, VPC, Kubernetes, cloud deployments</p>
-</div>
+  <div class="grid">
 
-<div class="card">
-<h3>Backend Developer</h3>
-<p><strong>Chella Corporations</strong></p>
-<p>FastAPI, Linux deployment, secure APIs</p>
-</div>
+    <div class="card">
+      <h3>Cloud Engineer Intern</h3>
+      <p><strong>Cloud Ambassadors (Google Cloud Partner)</strong></p>
+      <p>
+        • Provisioning Compute Engine, IAM, Cloud Storage<br>
+        • Configuring VPC networks and firewall rules<br>
+        • Deploying containerized applications (GKE)<br>
+        • Working on real-time cloud infrastructure
+      </p>
+    </div>
 
-<div class="card">
-<h3>AI Intern</h3>
-<p><strong>Infosys</strong></p>
-<p>GPT workflows & AI automation systems</p>
-</div>
-</div>
+    <div class="card">
+      <h3>Backend Developer</h3>
+      <p><strong>Chella Corporations</strong></p>
+      <p>
+        • Built REST APIs using FastAPI<br>
+        • Managed backend systems on Linux<br>
+        • Implemented secure authentication systems
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>AI Developer Intern</h3>
+      <p><strong>Infosys Springboard</strong></p>
+      <p>
+        • Developed AI compliance system (70% efficiency boost)<br>
+        • Integrated GPT-based workflows
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
-<h2>Projects</h2>
+  <h2>Projects</h2>
 
-<div class="grid">
-<div class="card">
-<h3>IoT Forensics Device</h3>
-<p>Raspberry Pi evidence system with hashing</p>
-</div>
+  <div class="grid">
 
-<div class="card">
-<h3>Cloud Deployment System</h3>
-<p>GCP infrastructure with IAM & container deployment</p>
-</div>
-</div>
+    <div class="card">
+      <h3>IoT Forensics Device</h3>
+      <p>
+        Raspberry Pi-based digital evidence collector with SHA-256 hashing and secure storage.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Deployment System</h3>
+      <p>
+        Built scalable infrastructure using GCP, IAM, VPC, and container-based deployments.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
-<h2>Skills</h2>
+  <h2>Skills</h2>
 
-<div class="skills">
-<span>AWS</span>
-<span>GCP</span>
-<span>Kubernetes</span>
-<span>Docker</span>
-<span>Linux</span>
-<span>Networking</span>
-<span>Python</span>
-<span>.NET</span>
-</div>
+  <div class="skills">
+    <span>Google Cloud (GCP)</span>
+    <span>AWS</span>
+    <span>Kubernetes (GKE)</span>
+    <span>Docker</span>
+    <span>Linux</span>
+    <span>IAM</span>
+    <span>VPC</span>
+    <span>Networking</span>
+    <span>Python</span>
+    <span>FastAPI</span>
+    <span>.NET</span>
+  </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="section">
-<h2>Certifications</h2>
+  <h2>Certifications</h2>
 
-<div class="grid">
-<div class="card">
-<h3>AWS Certified Cloud Practitioner</h3>
-</div>
+  <div class="grid">
 
-<div class="card">
-<h3>Google Associate Cloud Engineer</h3>
-</div>
+    <div class="card">
+      <h3>AWS Certified Cloud Practitioner</h3>
+      <p>Amazon Web Services</p>
+    </div>
 
-<div class="card">
-<h3>Cisco Networking Basics</h3>
-</div>
+    <div class="card">
+      <h3>Google Associate Cloud Engineer (ACE)</h3>
+      <p>Google Cloud</p>
+    </div>
 
-<div class="card">
-<h3>EC-Council Network Defence</h3>
-</div>
-</div>
+    <div class="card">
+      <h3>EC-Council Network Defence Essentials</h3>
+      <p>Cybersecurity</p>
+    </div>
+
+    <div class="card">
+      <h3>Cisco Networking Basics</h3>
+      <p>Cisco</p>
+    </div>
+
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Hariharan J | Cloud Engineer
+  © 2026 Hariharan J | Cloud Engineer Portfolio
 </footer>
 
 </body>
