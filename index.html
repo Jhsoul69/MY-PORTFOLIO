@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hariharan J portfolio - Cloud Engineer, AWS Certified Cloud Practitioner, Google Associate Cloud Engineer, backend developer, and security-focused builder.">
+  <meta name="description" content="Hariharan J portfolio - AWS and Google Cloud engineer focused on cloud security, DNS migration, VPN, database migration, DevOps, Linux, and cybersecurity.">
   <title>Hariharan J | Cloud Engineer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #12141d;
-      --muted: #5d6678;
-      --paper: #fbfbf7;
+      --ink: #202124;
+      --muted: #5f6368;
+      --paper: #f8fafd;
       --surface: #ffffff;
-      --line: rgba(18, 20, 29, 0.12);
-      --mint: #17a99a;
-      --blue: #2364d2;
-      --coral: #f06a4d;
-      --gold: #e7ad24;
-      --violet: #6e58d9;
-      --charcoal: #101820;
+      --line: #dadce0;
+      --mint: #34a853;
+      --blue: #1a73e8;
+      --coral: #ea4335;
+      --gold: #fbbc04;
+      --violet: #8e24aa;
+      --amber: #ffca28;
+      --charcoal: #202124;
       --radius: 8px;
-      --shadow: 0 18px 55px rgba(18, 20, 29, 0.12);
+      --shadow: 0 10px 30px rgba(60, 64, 67, 0.12);
     }
 
     * {
@@ -37,11 +38,7 @@
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background:
-        linear-gradient(90deg, rgba(18, 20, 29, 0.04) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(18, 20, 29, 0.035) 1px, transparent 1px),
-        var(--paper);
-      background-size: 44px 44px;
+      background: var(--paper);
       letter-spacing: 0;
     }
 
@@ -79,10 +76,10 @@
       justify-content: space-between;
       gap: 20px;
       padding: 14px clamp(18px, 4vw, 64px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(16, 24, 32, 0.86);
-      color: #fff;
-      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      backdrop-filter: blur(16px);
     }
 
     .brand {
@@ -101,8 +98,8 @@
       height: 36px;
       place-items: center;
       border-radius: 8px;
-      background: linear-gradient(135deg, var(--mint), var(--gold));
-      color: var(--charcoal);
+      background: var(--amber);
+      color: #3c4043;
       font-weight: 800;
     }
 
@@ -110,7 +107,7 @@
       display: flex;
       align-items: center;
       gap: clamp(10px, 1.7vw, 22px);
-      color: rgba(255, 255, 255, 0.82);
+      color: #3c4043;
       font-size: 0.92rem;
       font-weight: 600;
     }
@@ -144,27 +141,25 @@
       height: 42px;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
+      background: #fff;
+      color: var(--ink);
       cursor: pointer;
     }
 
     .hero {
       position: relative;
       display: grid;
-      min-height: 86vh;
+      min-height: 82vh;
       grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.8fr);
-      gap: clamp(32px, 5vw, 84px);
+      gap: clamp(28px, 4vw, 70px);
       align-items: center;
-      padding: clamp(54px, 8vw, 102px) clamp(18px, 4vw, 64px) clamp(44px, 7vw, 92px);
-      color: #fff;
+      padding: clamp(42px, 6vw, 78px) clamp(18px, 4vw, 64px) clamp(34px, 5vw, 68px);
+      color: var(--ink);
       background:
-        linear-gradient(110deg, rgba(16, 24, 32, 0.96), rgba(16, 24, 32, 0.84) 48%, rgba(35, 100, 210, 0.34)),
-        radial-gradient(circle at 74% 22%, rgba(231, 173, 36, 0.24), transparent 28%),
-        radial-gradient(circle at 24% 76%, rgba(23, 169, 154, 0.24), transparent 28%),
-        var(--charcoal);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 253, 0.96)),
+        var(--paper);
       isolation: isolate;
     }
 
@@ -173,7 +168,7 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.56;
+      opacity: 0;
       z-index: -1;
     }
 
@@ -187,7 +182,7 @@
       align-items: center;
       gap: 10px;
       margin: 0 0 18px;
-      color: #c7fff4;
+      color: #3c4043;
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.08em;
@@ -199,7 +194,7 @@
       height: 9px;
       border-radius: 50%;
       background: var(--gold);
-      box-shadow: 0 0 18px rgba(231, 173, 36, 0.9);
+      box-shadow: none;
     }
 
     h1,
@@ -212,28 +207,28 @@
 
     h1 {
       max-width: 760px;
-      font-size: clamp(3.5rem, 11vw, 8.8rem);
-      line-height: 0.82;
+      font-size: clamp(3.25rem, 8.8vw, 7rem);
+      line-height: 0.88;
       font-weight: 700;
     }
 
     .hero h1 span {
-      color: #ffffff;
+      color: var(--ink);
     }
 
     .hero-lede {
       max-width: 680px;
-      margin: 24px 0 0;
-      color: rgba(255, 255, 255, 0.82);
-      font-size: clamp(1rem, 2vw, 1.28rem);
-      line-height: 1.72;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.45vw, 1.14rem);
+      line-height: 1.62;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     .button {
@@ -255,14 +250,14 @@
     }
 
     .button-primary {
-      background: var(--gold);
-      color: #141414;
+      background: var(--blue);
+      color: #fff;
     }
 
     .button-secondary {
-      border-color: rgba(255, 255, 255, 0.28);
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
+      border-color: var(--line);
+      background: #fff;
+      color: #1a73e8;
     }
 
     .button-light {
@@ -281,15 +276,15 @@
 
     .proof-item {
       padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.075);
-      backdrop-filter: blur(12px);
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(60, 64, 67, 0.08);
     }
 
     .proof-item strong {
       display: block;
-      color: #fff;
+      color: var(--ink);
       font-family: "Space Grotesk", sans-serif;
       font-size: clamp(1.2rem, 2vw, 1.65rem);
       line-height: 1;
@@ -298,7 +293,7 @@
     .proof-item span {
       display: block;
       margin-top: 7px;
-      color: rgba(255, 255, 255, 0.7);
+      color: var(--muted);
       font-size: 0.84rem;
       line-height: 1.35;
     }
@@ -315,37 +310,16 @@
       position: relative;
       width: min(100%, 390px);
       padding: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 26px 80px rgba(0, 0, 0, 0.35);
+      background: #fff;
+      box-shadow: var(--shadow);
       transform-style: preserve-3d;
     }
 
     .portrait-panel::before,
     .portrait-panel::after {
-      position: absolute;
-      content: "";
-      pointer-events: none;
-    }
-
-    .portrait-panel::before {
-      inset: 24px auto auto -22px;
-      width: 78px;
-      height: 78px;
-      border: 2px solid var(--mint);
-      border-radius: 8px;
-      transform: translateZ(-16px) rotate(12deg);
-    }
-
-    .portrait-panel::after {
-      right: -18px;
-      bottom: 34px;
-      width: 102px;
-      height: 38px;
-      border: 2px solid var(--coral);
-      border-radius: 8px;
-      transform: translateZ(12px) rotate(-8deg);
+      display: none;
     }
 
     .portrait-panel img {
@@ -366,16 +340,17 @@
 
     .signal {
       padding: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.09);
-      color: rgba(255, 255, 255, 0.78);
+      background: #fff;
+      color: var(--muted);
       font-size: 0.85rem;
+      box-shadow: 0 4px 14px rgba(60, 64, 67, 0.08);
     }
 
     .signal strong {
       display: block;
-      color: #fff;
+      color: var(--ink);
       font-family: "Space Grotesk", sans-serif;
       font-size: 1.35rem;
     }
@@ -385,7 +360,7 @@
     }
 
     .section:nth-of-type(odd) {
-      background: rgba(255, 255, 255, 0.62);
+      background: #fff;
     }
 
     .section-inner {
@@ -1055,10 +1030,10 @@
         display: grid;
         gap: 4px;
         padding: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(16, 24, 32, 0.98);
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 24px 60px rgba(60, 64, 67, 0.18);
         opacity: 0;
         pointer-events: none;
         transform: translateY(-12px);
@@ -1086,7 +1061,8 @@
       }
 
       h1 {
-        font-size: clamp(3.15rem, 20vw, 5.2rem);
+        font-size: clamp(3rem, 15vw, 4.1rem);
+        line-height: 0.95;
       }
 
       .hero-lede {
@@ -1192,6 +1168,7 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="assets/resume/Hariharan_J_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
@@ -1203,15 +1180,19 @@
       <section class="hero" aria-labelledby="hero-title">
         <canvas id="cloudScene" aria-hidden="true"></canvas>
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="dot"></span> Cloud Engineer | AWS CCP | Google ACE</p>
+          <p class="eyebrow"><span class="dot"></span> AWS Cloud Security | GCP | DevOps</p>
           <h1 id="hero-title"><span>Hariharan</span> J</h1>
           <p class="hero-lede">
-            I build cloud-native systems across Google Cloud, AWS, Kubernetes, Linux, Python APIs, and security-aware automation. My public profile centers on GKE, DevOps, backend development, and practical infrastructure work.
+            Cloud engineering fresher with hands-on AWS and Google Cloud experience across IAM, VPC, Route 53, Cloud DNS, HA VPN, database migration, load balancing, Docker, Kubernetes, Linux, Terraform, and security-aware infrastructure.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">
+            <a class="button button-primary" href="assets/resume/Hariharan_J_Resume.pdf" target="_blank" rel="noreferrer">
+              <i data-lucide="download"></i>
+              Download Resume
+            </a>
+            <a class="button button-secondary" href="#projects">
               <i data-lucide="rocket"></i>
-              View Projects
+              Cloud Projects
             </a>
             <a class="button button-secondary" href="https://www.linkedin.com/in/hariharan-j-2a909a290" target="_blank" rel="noreferrer">
               <i data-lucide="external-link"></i>
@@ -1224,16 +1205,16 @@
           </div>
           <div class="hero-proof" aria-label="Portfolio highlights">
             <div class="proof-item">
-              <strong>15</strong>
-              <span>public GitHub repositories</span>
+              <strong>AWS</strong>
+              <span>Certified Cloud Practitioner</span>
             </div>
             <div class="proof-item">
-              <strong>2.8k+</strong>
-              <span>LinkedIn followers in public preview</span>
+              <strong>GCP</strong>
+              <span>Associate Cloud Engineer</span>
             </div>
             <div class="proof-item">
-              <strong>GKE</strong>
-              <span>Kubernetes and cloud deployment focus</span>
+              <strong>2026</strong>
+              <span>B.E. Cybersecurity graduate track</span>
             </div>
           </div>
         </div>
@@ -1245,11 +1226,11 @@
           <div class="signal-strip" aria-label="Profile signal">
             <div class="signal">
               <strong>AWS</strong>
-              Certified Cloud Practitioner
+              IAM, VPC, Route 53, RDS
             </div>
             <div class="signal">
               <strong>GCP</strong>
-              Associate Cloud Engineer
+              Cloud DNS, GKE, Cloud SQL
             </div>
           </div>
         </div>
@@ -1260,10 +1241,10 @@
           <div class="section-heading reveal">
             <div>
               <span class="section-kicker"><i data-lucide="sparkles"></i> Profile</span>
-              <h2 class="section-title">Cloud builder with a security-first backend mindset.</h2>
+              <h2 class="section-title">Cloud security profile built for AWS and Google Cloud roles.</h2>
             </div>
             <p class="section-text">
-              Public LinkedIn and GitHub signals point to a hands-on engineer who moves between cloud infrastructure, API automation, AI-assisted products, and cybersecurity fundamentals.
+              I focus on practical infrastructure: secure access, cloud networking, DNS, migration, containers, Linux operations, and backend automation.
             </p>
           </div>
 
@@ -1271,33 +1252,33 @@
             <div class="about-copy reveal">
               <article class="focus-card">
                 <div class="icon-tile"><i data-lucide="cloud"></i></div>
-                <h3>Cloud Infrastructure</h3>
-                <p>Compute Engine, IAM, Cloud Storage, VPC, firewall rules, GKE, AWS fundamentals, deployment thinking, and cloud operations.</p>
+                <h3>AWS and GCP Infrastructure</h3>
+                <p>IAM, EC2, S3, VPC, Route 53, RDS, Cloud DNS, Compute Engine, Cloud Storage, Cloud SQL, Cloud Run, and GKE.</p>
+              </article>
+              <article class="focus-card">
+                <div class="icon-tile"><i data-lucide="network"></i></div>
+                <h3>Cloud Security and Networking</h3>
+                <p>Least-privilege IAM, security groups, firewall rules, VPN, BGP, DNS, SSL/TLS, subnetting, routing, and monitoring basics.</p>
               </article>
               <article class="focus-card">
                 <div class="icon-tile"><i data-lucide="terminal-square"></i></div>
-                <h3>Backend Systems</h3>
-                <p>Python, FastAPI, REST APIs, Java, Linux workflows, authentication, API integrations, and practical automation scripts.</p>
-              </article>
-              <article class="focus-card">
-                <div class="icon-tile"><i data-lucide="shield-check"></i></div>
-                <h3>Security and AI</h3>
-                <p>IoT forensics, regulatory compliance checking, wallet risk scoring, secure warehouse workflows, and cybersecurity learning.</p>
+                <h3>DevOps and Automation</h3>
+                <p>Docker, Kubernetes, Terraform, GitHub Actions, AWS CodePipeline, Linux, Bash, Python, FastAPI, REST APIs, and Postman.</p>
               </article>
             </div>
 
             <aside class="snapshot reveal" aria-label="Public profile snapshot">
               <div class="snapshot-item">
                 <span>Headline</span>
-                <strong>Cloud Engineer, AWS Certified Cloud Practitioner, Google Associate Cloud Engineer, Kubernetes, GKE, DevOps, Linux, Backend Developer.</strong>
+                <strong>AWS Cloud Security Engineer, Cloud Engineer, DevOps Fresher, AWS CCP, Google ACE, Cybersecurity Engineering.</strong>
               </div>
               <div class="snapshot-item">
                 <span>Education</span>
-                <strong>B.E. Cybersecurity Engineering, J.J. College of Engineering and Technology.</strong>
+                <strong>B.E. Cybersecurity Engineering, J.J. College of Engineering and Technology, 2022 - 2026, CGPA 8.5/10.</strong>
               </div>
               <div class="snapshot-item">
-                <span>Public Work</span>
-                <strong>15 GitHub repositories spanning cloud, AI, DeFi scoring, APIs, and Java systems.</strong>
+                <span>Target Roles</span>
+                <strong>Cloud Engineer, Cloud Support Engineer, Cloud Operations Engineer, DevOps Trainee, Cloud Security Engineer.</strong>
               </div>
             </aside>
           </div>
@@ -1309,10 +1290,10 @@
           <div class="section-heading reveal">
             <div>
               <span class="section-kicker"><i data-lucide="briefcase-business"></i> Experience</span>
-              <h2 class="section-title">Hands-on roles across cloud, backend, and AI systems.</h2>
+              <h2 class="section-title">Hands-on experience across cloud infrastructure and secure backend systems.</h2>
             </div>
             <p class="section-text">
-              The portfolio emphasizes public profile evidence and existing resume/project signals, then turns them into a stronger hiring narrative.
+              These roles connect cloud deployment, IAM, networking, Linux, APIs, and automation into one fresher-ready engineering profile.
             </p>
           </div>
 
@@ -1328,9 +1309,10 @@
                   <span class="pill">GCP + GKE</span>
                 </header>
                 <ul>
-                  <li>Worked with Compute Engine, IAM, Cloud Storage, VPC networking, firewall rules, and cloud infrastructure setup.</li>
-                  <li>Practiced containerized deployments and Kubernetes workflows with Google Kubernetes Engine.</li>
-                  <li>Built a cloud narrative around deployability, reliability, security, and cost-aware operations.</li>
+                  <li>Provisioned Compute Engine, Cloud Storage, IAM roles, VPC networks, firewall rules, and secure access policies.</li>
+                  <li>Supported AWS and GCP tasks across VPC, IAM, DNS, load balancing, VPN, migration workflows, and troubleshooting.</li>
+                  <li>Configured Cloud DNS and Route 53 records, HTTPS load balancer validation, and SSL/TLS certificate workflows.</li>
+                  <li>Practiced Docker, Kubernetes/GKE, Artifact Registry, Cloud Run, Linux, Git, Bash, and Terraform fundamentals.</li>
                 </ul>
               </div>
             </article>
@@ -1340,15 +1322,15 @@
               <div class="timeline-content">
                 <header>
                   <div>
-                    <h3>AI Software Engineer / Backend Developer</h3>
-                    <span class="role-meta">Chella IT Corporations and backend project work</span>
+                    <h3>Backend Developer</h3>
+                    <span class="role-meta">Chella Corporations</span>
                   </div>
                   <span class="pill">APIs + Linux</span>
                 </header>
                 <ul>
-                  <li>Built backend services and REST API workflows with Python, FastAPI, and Linux-based development practices.</li>
-                  <li>Worked on secure authentication, API integrations, and automation that connects product logic with infrastructure.</li>
-                  <li>Translated AI and data workflows into practical applications with measurable business utility.</li>
+                  <li>Developed REST APIs using Python and FastAPI for an AI-driven medical platform.</li>
+                  <li>Worked with secure authentication, service integration, database integration, debugging, and API automation.</li>
+                  <li>Deployed and maintained backend services on Linux servers, strengthening cloud operations readiness.</li>
                 </ul>
               </div>
             </article>
@@ -1358,15 +1340,14 @@
               <div class="timeline-content">
                 <header>
                   <div>
-                    <h3>AI Developer Intern</h3>
+                    <h3>AI Application Developer Intern</h3>
                     <span class="role-meta">Infosys Springboard</span>
                   </div>
                   <span class="pill">AI Compliance</span>
                 </header>
                 <ul>
-                  <li>Developed an AI-powered regulatory compliance checker for contracts.</li>
-                  <li>Focused on document analysis, compliance verification, and workflow automation using Python.</li>
-                  <li>Created public GitHub project records that demonstrate the system direction and technical stack.</li>
+                  <li>Built an AI-based compliance checker scoring system that improved process efficiency by 70%.</li>
+                  <li>Integrated GPT-based workflows for document analysis, compliance verification, and automated evaluation tasks.</li>
                 </ul>
               </div>
             </article>
@@ -1379,121 +1360,84 @@
           <div class="section-heading reveal">
             <div>
               <span class="section-kicker"><i data-lucide="layers-3"></i> Projects</span>
-              <h2 class="section-title">Cloud, security, AI, and backend projects with public proof.</h2>
+              <h2 class="section-title">Cloud projects that prove migration, security, and DevOps practice.</h2>
             </div>
             <p class="section-text">
-              This selection combines public GitHub repositories with portfolio-ready project work from the public profile and resume trail.
+              I removed unrelated project noise and kept the work that directly supports AWS, Google Cloud, security, and cloud operations roles.
             </p>
           </div>
 
           <div class="project-grid">
             <article class="project-card reveal">
               <div class="project-top">
-                <div class="project-icon"><i data-lucide="warehouse"></i></div>
-                <h3>Secure Warehouse Management System</h3>
-                <p>A Java system positioned around secure inventory and warehouse operations, suitable for access-aware business workflows.</p>
+                <div class="project-icon"><i data-lucide="route"></i></div>
+                <h3>AWS Route 53 to Google Cloud DNS Migration</h3>
+                <p>Documented zero-downtime domain migration for haridns.qzz.io with DNS inventory, Cloud DNS zone creation, record replication, NS cutover, validation, and rollback.</p>
                 <div class="tags">
-                  <span class="tag">Java</span>
-                  <span class="tag">Security</span>
-                  <span class="tag">Systems</span>
+                  <span class="tag">Route 53</span>
+                  <span class="tag">Cloud DNS</span>
+                  <span class="tag">DNS</span>
+                  <span class="tag">SSL/TLS</span>
                 </div>
               </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/secure-warehouse-management-system" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
+              <a class="project-link" href="assets/projects/Transfer_of__haridns.qzz.io__from_AWS_Route53_to_Google_Cloud_Domains_DNS.pdf" target="_blank" rel="noreferrer">Open case study <i data-lucide="arrow-up-right"></i></a>
             </article>
 
             <article class="project-card reveal">
               <div class="project-top">
-                <div class="project-icon"><i data-lucide="file-search"></i></div>
-                <h3>AI Regulatory Compliance Checker</h3>
-                <p>Python project for contract review and regulatory compliance verification through intelligent automation.</p>
+                <div class="project-icon"><i data-lucide="database-zap"></i></div>
+                <h3>Private AWS RDS to GCP Cloud SQL Migration</h3>
+                <p>Designed private PostgreSQL migration using AWS VPC/VGW, GCP HA VPN, IPsec, BGP, Private Services Access, and Database Migration Service.</p>
                 <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">AI</span>
-                  <span class="tag">Contracts</span>
+                  <span class="tag">AWS RDS</span>
+                  <span class="tag">Cloud SQL</span>
+                  <span class="tag">HA VPN</span>
+                  <span class="tag">BGP</span>
                 </div>
               </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/assignment-2-infosys" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
+              <a class="project-link" href="assets/projects/Private_Database_Migration_from_AWS_RDS_PostgreSQL_to_GCP_Cloud_SQL_PostgreSQL_using_GCP_Database_Migration_Service_DMS_1.pdf" target="_blank" rel="noreferrer">Open case study <i data-lucide="arrow-up-right"></i></a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <div class="project-icon"><i data-lucide="shield-check"></i></div>
+                <h3>Private Cloud Storage Behind Load Balancer</h3>
+                <p>Built a GCP pattern for private Cloud Storage access through a global external application load balancer with backend bucket validation.</p>
+                <div class="tags">
+                  <span class="tag">Cloud Storage</span>
+                  <span class="tag">Load Balancer</span>
+                  <span class="tag">GCP</span>
+                  <span class="tag">HTTPS</span>
+                </div>
+              </div>
+              <a class="project-link" href="assets/projects/Private_Cloud_Storage_Bucket_Access_Through_Global_External_Application_Load_Balancer.pdf" target="_blank" rel="noreferrer">Open case study <i data-lucide="arrow-up-right"></i></a>
             </article>
 
             <article class="project-card reveal">
               <div class="project-top">
                 <div class="project-icon"><i data-lucide="network"></i></div>
-                <h3>DeFi Reputation Scoring Server</h3>
-                <p>Event-driven microservice concept for real-time DeFi wallet reputation scoring from transaction streams and AI scoring logic.</p>
+                <h3>AWS to GCP Site-to-Site VPN</h3>
+                <p>Prepared VPN documentation covering AWS and GCP networking, secure tunnel configuration, routing, validation, and hybrid cloud connectivity.</p>
                 <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Kafka</span>
-                  <span class="tag">DeFi</span>
+                  <span class="tag">VPN</span>
+                  <span class="tag">AWS VPC</span>
+                  <span class="tag">GCP VPC</span>
+                  <span class="tag">Routing</span>
                 </div>
               </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/DeFi-Reputation-Scoring-Server" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
+              <a class="project-link" href="assets/projects/VPN_Tunnel_Documentation_AWS_GCP_Complete_Detailed_Version.pdf" target="_blank" rel="noreferrer">Open case study <i data-lucide="arrow-up-right"></i></a>
             </article>
 
             <article class="project-card reveal">
               <div class="project-top">
-                <div class="project-icon"><i data-lucide="gauge-circle"></i></div>
-                <h3>Wallet Risk and Aave Credit Scoring</h3>
-                <p>Ethereum wallet scoring work using Compound, Covalent, Aave V2 transaction behavior, and risk-oriented metrics.</p>
+                <div class="project-icon"><i data-lucide="container"></i></div>
+                <h3>Cloud DevOps Deployment Pipeline</h3>
+                <p>Practiced container deployment using Docker, GitHub, CI/CD, Amazon ECR, Amazon ECS, CodePipeline, blue-green deployment, Kubernetes services, and rolling updates.</p>
                 <div class="tags">
-                  <span class="tag">Risk</span>
-                  <span class="tag">Ethereum</span>
-                  <span class="tag">Analytics</span>
-                </div>
-              </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/wallet-risk-scoring" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-top">
-                <div class="project-icon"><i data-lucide="server-cog"></i></div>
-                <h3>VMware AVI API Automation</h3>
-                <p>Python and Postman automation for tenant creation, deletion, and REST API operations on VMware AVI Load Balancer.</p>
-                <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Postman</span>
-                  <span class="tag">REST</span>
-                </div>
-              </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/API-AVI-AUTOMATION" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-top">
-                <div class="project-icon"><i data-lucide="bot"></i></div>
-                <h3>Admission Counselor LLM with API</h3>
-                <p>LLM-powered counselor concept for course selection using student preferences, eligibility, APIs, and university data.</p>
-                <div class="tags">
-                  <span class="tag">LLM</span>
-                  <span class="tag">APIs</span>
-                  <span class="tag">Education</span>
-                </div>
-              </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/Admission-counselor-LLM-with-API" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-top">
-                <div class="project-icon"><i data-lucide="hard-drive"></i></div>
-                <h3>IoT Forensics Device</h3>
-                <p>Raspberry Pi-based evidence collector concept with SHA-256 hashing, secure storage, and forensic integrity as the product focus.</p>
-                <div class="tags">
-                  <span class="tag">IoT</span>
-                  <span class="tag">Forensics</span>
-                  <span class="tag">SHA-256</span>
-                </div>
-              </div>
-              <a class="project-link" href="#contact">Discuss project <i data-lucide="arrow-up-right"></i></a>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-top">
-                <div class="project-icon"><i data-lucide="cloud-upload"></i></div>
-                <h3>Mini Cloud Stack Deployment</h3>
-                <p>Portfolio cloud deployment work around IAM, VPC, storage, compute, firewall policy, containers, and GKE-based services.</p>
-                <div class="tags">
-                  <span class="tag">GCP</span>
-                  <span class="tag">GKE</span>
-                  <span class="tag">DevOps</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">ECR</span>
+                  <span class="tag">ECS</span>
+                  <span class="tag">Kubernetes</span>
                 </div>
               </div>
               <a class="project-link" href="https://github.com/Jhsoul69" target="_blank" rel="noreferrer">View GitHub <i data-lucide="arrow-up-right"></i></a>
@@ -1501,16 +1445,17 @@
 
             <article class="project-card reveal">
               <div class="project-top">
-                <div class="project-icon"><i data-lucide="cloud-sun"></i></div>
-                <h3>Weather Application</h3>
-                <p>A compact Python weather app that rounds out the portfolio with practical API consumption and interface logic.</p>
+                <div class="project-icon"><i data-lucide="server-cog"></i></div>
+                <h3>Backend and API Automation</h3>
+                <p>Built REST API and automation experience with Python, FastAPI, Linux, secure authentication, database integration, Postman, and VMware AVI API workflows.</p>
                 <div class="tags">
                   <span class="tag">Python</span>
-                  <span class="tag">API</span>
-                  <span class="tag">App</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Linux</span>
+                  <span class="tag">Postman</span>
                 </div>
               </div>
-              <a class="project-link" href="https://github.com/Jhsoul69/weather-application" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
+              <a class="project-link" href="https://github.com/Jhsoul69/API-AVI-AUTOMATION" target="_blank" rel="noreferrer">Open repository <i data-lucide="arrow-up-right"></i></a>
             </article>
           </div>
         </div>
@@ -1524,7 +1469,7 @@
               <h2 class="section-title">A practical stack for shipping and securing cloud systems.</h2>
             </div>
             <p class="section-text">
-              The stack blends cloud platforms, infrastructure fundamentals, backend code, API automation, and security-aware engineering.
+              ATS-friendly skills from the resume, grouped for cloud security, DevOps, networking, and fresher cloud engineer roles.
             </p>
           </div>
 
@@ -1534,22 +1479,34 @@
               <div class="skill-cloud" aria-label="Skills">
                 <span class="skill-chip">Google Cloud</span>
                 <span class="skill-chip">AWS</span>
+                <span class="skill-chip">EC2</span>
+                <span class="skill-chip">S3</span>
+                <span class="skill-chip">Route 53</span>
+                <span class="skill-chip">RDS</span>
+                <span class="skill-chip">Cloud DNS</span>
+                <span class="skill-chip">Cloud SQL</span>
                 <span class="skill-chip">Kubernetes</span>
                 <span class="skill-chip">GKE</span>
                 <span class="skill-chip">Docker</span>
+                <span class="skill-chip">Terraform</span>
                 <span class="skill-chip">Linux</span>
                 <span class="skill-chip">IAM</span>
                 <span class="skill-chip">VPC</span>
+                <span class="skill-chip">VPN</span>
+                <span class="skill-chip">DNS</span>
+                <span class="skill-chip">SSL/TLS</span>
+                <span class="skill-chip">Security Groups</span>
                 <span class="skill-chip">Networking</span>
                 <span class="skill-chip">Python</span>
                 <span class="skill-chip">FastAPI</span>
                 <span class="skill-chip">REST APIs</span>
                 <span class="skill-chip">Java</span>
                 <span class="skill-chip">Git</span>
+                <span class="skill-chip">GitHub Actions</span>
+                <span class="skill-chip">AWS CodePipeline</span>
                 <span class="skill-chip">Postman</span>
                 <span class="skill-chip">Cybersecurity</span>
-                <span class="skill-chip">AI Workflows</span>
-                <span class="skill-chip">Backend Development</span>
+                <span class="skill-chip">Backend APIs</span>
               </div>
             </div>
 
@@ -1574,6 +1531,11 @@
                 <h3>Cisco Networking Basics</h3>
                 <p>Networking concepts that support cloud, Linux, backend, and DevOps workflows.</p>
               </article>
+              <article class="cert-card">
+                <i data-lucide="brain-circuit"></i>
+                <h3>Infosys AI Primer</h3>
+                <p>AI workflow fundamentals used in compliance automation and backend project work.</p>
+              </article>
             </div>
           </div>
         </div>
@@ -1585,44 +1547,44 @@
             <article class="education-panel reveal">
               <div>
                 <span class="section-kicker"><i data-lucide="graduation-cap"></i> Education</span>
-                <h2 class="section-title">J.J. College of Engineering and Technology</h2>
-              </div>
-              <p>B.E. Cybersecurity Engineering with a public academic profile showing cloud, cybersecurity, AI, and project-oriented growth.</p>
+              <h2 class="section-title">J.J. College of Engineering and Technology</h2>
+            </div>
+              <p>B.E. Cybersecurity Engineering under Anna University, with coursework and projects aligned to computer networks, operating systems, cryptography, distributed systems, cloud infrastructure, and security.</p>
               <div class="education-stats">
                 <div class="education-stat">
-                  <strong>8.3</strong>
+                  <strong>8.5</strong>
                   <span>CGPA</span>
                 </div>
                 <div class="education-stat">
-                  <strong>2025</strong>
+                  <strong>2026</strong>
                   <span>Graduation Track</span>
                 </div>
               </div>
             </article>
 
             <article class="activity-panel reveal">
-              <span class="section-kicker"><i data-lucide="radio-tower"></i> Public Activity</span>
-              <h2 class="section-title">Visible themes from posts, projects, and achievements.</h2>
+              <span class="section-kicker"><i data-lucide="radio-tower"></i> Cloud Readiness</span>
+              <h2 class="section-title">What I can discuss confidently in interviews.</h2>
               <div class="activity-list">
                 <div class="activity-card">
                   <div class="activity-icon"><i data-lucide="presentation"></i></div>
                   <div>
-                    <h4>Technical learning and workshops</h4>
-                    <p>Public trail includes cloud, Linux, Git, Java/JDBC/Spring, cybersecurity, and student learning activity.</p>
+                    <h4>Cloud networking</h4>
+                    <p>VPC, subnetting, route tables, NAT, VPN, firewall rules, security groups, DNS, and load balancer workflows.</p>
                   </div>
                 </div>
                 <div class="activity-card">
                   <div class="activity-icon"><i data-lucide="trophy"></i></div>
                   <div>
-                    <h4>Hackathon and college recognition</h4>
-                    <p>Resume evidence highlights Smart India Hackathon internal finalist work, Naan Mudhalvan cybersecurity learning, and technical paper activity.</p>
+                    <h4>Migration and validation</h4>
+                    <p>DNS migration, database migration planning, replication checks, rollback thinking, dig/nslookup validation, and documentation.</p>
                   </div>
                 </div>
                 <div class="activity-card">
                   <div class="activity-icon"><i data-lucide="code-2"></i></div>
                   <div>
-                    <h4>Open project history</h4>
-                    <p>GitHub shows public repositories across AI compliance, DeFi scoring, API automation, cloud/backend utilities, and portfolio work.</p>
+                    <h4>Automation and operations</h4>
+                    <p>Docker, Kubernetes, Terraform basics, CI/CD, Linux troubleshooting, REST APIs, Git, GitHub Actions, and cloud monitoring fundamentals.</p>
                   </div>
                 </div>
               </div>
@@ -1636,19 +1598,19 @@
           <div class="achievements">
             <div class="achievement-visual reveal">
               <div class="achievement-visual-content">
-                <strong>Proof is the portfolio.</strong>
-                <span>Certifications, repos, internships, and public learning signals are presented as one cohesive engineering story.</span>
+                <strong>Focused for cloud hiring.</strong>
+                <span>Certifications, internship work, project documents, and backend experience now point to one clear cloud security story.</span>
               </div>
             </div>
             <article class="achievement-panel reveal">
               <span class="section-kicker"><i data-lucide="stars"></i> Achievements</span>
-              <h3>Career signals that make the profile sharper.</h3>
+              <h3>Career signals aligned to cloud engineer roles.</h3>
               <ul class="achievement-list">
-                <li>AWS Certified Cloud Practitioner and Google Associate Cloud Engineer profile positioning.</li>
-                <li>Cloud Engineer internship exposure with Google Cloud partner ecosystem and GKE workflows.</li>
-                <li>AI compliance project repository demonstrating contract review automation and verification logic.</li>
-                <li>Security-forward academic path through Cybersecurity Engineering and Network Defense Essentials.</li>
-                <li>Public GitHub work across Java, Python, cloud APIs, DeFi scoring, LLM apps, and automation.</li>
+                <li>AWS Certified Cloud Practitioner and Google Associate Cloud Engineer profile for multi-cloud roles.</li>
+                <li>Cloud Engineer internship exposure with Google Cloud partner ecosystem, GKE, IAM, VPC, and Cloud DNS workflows.</li>
+                <li>Documented AWS to GCP DNS migration, private database migration, VPN, load balancer, and DevOps deployment projects.</li>
+                <li>Cybersecurity Engineering background with EC-Council Network Defense Essentials and Cisco Networking Basics.</li>
+                <li>Backend/API experience with Python, FastAPI, Linux, secure authentication, Postman, and REST automation.</li>
               </ul>
             </article>
           </div>
@@ -1660,10 +1622,14 @@
           <div class="contact-panel reveal">
             <div>
               <span class="section-kicker"><i data-lucide="send"></i> Contact</span>
-              <h2 class="section-title">Let us build the next cloud system.</h2>
-              <p>Open to cloud engineering, backend development, DevOps, AI automation, and security-focused project conversations.</p>
+              <h2 class="section-title">Ready for cloud engineer and cloud security fresher roles.</h2>
+              <p>Open to Cloud Engineer, Cloud Support Engineer, Cloud Operations Engineer, DevOps Trainee, and Cloud Security Engineer opportunities.</p>
             </div>
             <div class="contact-actions">
+              <a class="button button-primary" href="assets/resume/Hariharan_J_Resume.pdf" target="_blank" rel="noreferrer">
+                <i data-lucide="download"></i>
+                Resume
+              </a>
               <a class="button button-primary" href="mailto:jhariharancse@gmail.com">
                 <i data-lucide="mail"></i>
                 Email
