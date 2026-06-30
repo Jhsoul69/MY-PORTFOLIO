@@ -1,7 +1,10 @@
+.gitattributes text eol=lf
 *.docx binary
 *.gif binary
 *.jpg binary
 *.jpeg binary
 *.pdf binary
 *.png binary
+*.js text eol=lf
+*.svg text eol=lf
 *.webp binary
