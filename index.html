@@ -850,6 +850,32 @@
       background: rgba(255, 255, 255, 0.76);
     }
 
+    .cert-logo-badge {
+      padding: 0;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .cert-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .cert-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 9px;
+      border: 1px solid var(--glass-line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
     .cert-card p,
     .education-panel p,
     .activity-card p,
@@ -1600,9 +1626,18 @@
                 <p>Cloud concepts, AWS core services, security, pricing, and support fundamentals.</p>
               </article>
               <article class="cert-card">
-                <img class="cert-logo" src="assets/logos/googlecloud.svg" alt="Google Cloud logo">
+                <img class="cert-logo cert-logo-badge" src="assets/certifications/google-associate-cloud-engineer-badge.png" alt="Google Associate Cloud Engineer badge">
                 <h3>Google Associate Cloud Engineer</h3>
                 <p>Google Cloud deployment, operations, IAM, networking, and managed services foundation.</p>
+              </article>
+              <article class="cert-card">
+                <img class="cert-logo" src="assets/logos/aws.svg" alt="AWS logo">
+                <h3>AWS re/Start Cloud Practitioner</h3>
+                <p>TN Skill Corporation recognition for AWS re/Start Cloud Practitioner, issued 22-05-2026 with 98.00% and Grade A+ scorecard.</p>
+                <div class="cert-actions">
+                  <a href="assets/certifications/aws-tnskill-certificate.pdf" target="_blank" rel="noreferrer"><i data-lucide="file-check-2"></i> Certificate</a>
+                  <a href="assets/certifications/aws-tnskill-scorecard.pdf" target="_blank" rel="noreferrer"><i data-lucide="award"></i> Scorecard</a>
+                </div>
               </article>
               <article class="cert-card">
                 <img class="cert-logo" src="assets/logos/googlecloud.svg" alt="Google Cloud logo">
